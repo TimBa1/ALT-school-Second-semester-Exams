@@ -1,1 +1,1 @@
-timilehin-alt-school-exam.netlify.app
+https://timilehin-alt-school-exam.netlify.app
