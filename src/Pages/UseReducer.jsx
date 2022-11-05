@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import Button from '../components/Button';
-import Counter from '../components/Counter';
+
 
 
 const instialState = { count: 0 };
