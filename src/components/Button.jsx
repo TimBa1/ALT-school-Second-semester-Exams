@@ -5,7 +5,7 @@ const Button = ({text, color , handleChange}) => {
     backgroundColor: `${color}`,
     color: 'white',
     height:"50px",
-    width:"100px",
+    width:"200px",
     borderRadius:"10px",
     border:"none",
     cursor:"pointer",

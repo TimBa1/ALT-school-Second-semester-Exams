@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/***********NAVBAR***********/
+.name-title{
+  padding-top: 1rem;
+  font-family: 'Twinkle Star', cursive;
+  font-weight: bolder;  
+  font-size: 30px;
+  color:darkorange;
+  margin-right: 28rem;
+}
+/* @media screen(max-width:860px;) {
+  
+} */
+.muti{
+  display: flex;
+  justify-content: space-between !important;
+}
+.logo{
+  width: 70px;
+  height: 70px;
+}
+.tg{
+  position:fixed !important;
+  width:100%;
+  overflow: hidden;
+  top:0;
+  z-index: 1;
+  background-color: rgb(48, 40, 72);;
+  box-shadow: 3rem solid black;
+}
+.nav-link{
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.6px;
+}
+.nav-link:hover{
+  transform: scale(1.03);
+  transition: ease;
+  text-shadow: rgb(16, 13, 34);
+}
+.navbar-nav > li > a{
+  
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+.navbar-nav > li> a:hover{
+  border-bottom: 0.185rem solid darkorange;
+  width: fit-content;
+}
+
+.container-fluid{
+  color: var(--dark-orange);
+}
