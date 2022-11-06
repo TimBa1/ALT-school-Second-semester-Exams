@@ -1,1 +1,13 @@
 https://timilehin-alt-school-exam.netlify.app
+ALTSCHOOL AFRICA (SECOND EXAMINATION)
+LINK TO HOSTED SITE :https://timilehin-alt-school-exam.netlify.app;
+
+EXAM QUESTION: QUESTION NUMBER TWO
+
+THIS SITE SITE INCLUDES:
+
+404 PAGE
+ERROR BOUNDARY
+A CUSTOM COUNTER
+USEREDUCER COUNTER
+SEO tested (90%)
