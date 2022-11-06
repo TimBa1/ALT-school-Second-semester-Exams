@@ -1,8 +1,6 @@
 import React, { useReducer } from 'react'
 import Button from '../components/Button';
 
-
-
 const instialState = { count: 0 };
 function reducer(state, action) {
   switch (action.type) {
@@ -32,7 +30,7 @@ const UseReducer = () => {
     };
   return (
     <div>
-      <div style={{color:"darkorange",fontFamily:"fantasy", fontSize:"45px" ,marginTop:"-10rem", marginBottom:"5rem"}}>
+      <div style={{color:"darkorange",fontFamily:"fantasy", fontSize:"45px" ,marginTop:"2rem", marginBottom:"5rem"}}>
             Counter App with UseReducer
         </div>
         <h1>Count:{state.count}</h1>
@@ -44,10 +42,10 @@ const UseReducer = () => {
         </div>
  <input
         type="number"
-        value={state}
+        value={state.count}
         onChange={(e) => dispatch(e.target.value)}
         placeholder="number"
-        style={{width:"150px",marginTop:"1rem", height:"50px", outline:"transparent",backgroundColor:"rgb(48, 40, 72)",color:"white", border:"3px solid darkorange", borderRadius:"10px"}}
+        style={{width:"150px",marginTop:"1rem", height:"50px", textAlign:"center", outline:"transparent",backgroundColor:"rgb(48, 40, 72)",color:"white", border:"3px solid darkorange", borderRadius:"10px"}}
       />
     </div>
   )

@@ -1,40 +1,50 @@
 import { CustomHooksPath, UseReducerPath } from "../paths";
 
-function Navbar() {
+
+import Container from 'react-bootstrap/Container';
+
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+function OffcanvasExample() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark shadow tg">
-      <div className="container">
-        <div className="container-fluid d-flex muti">
-          <h1 className="name-title">TimBa</h1>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ni mb-2 mb-lg-0">
-            <li className="nav-item">
-                <a className="nav-link" href={CustomHooksPath}>
-                  CustomHook
-                </a>
-              </li>
-              <li className="nav-item">
+    <div className="nav-item">
+      {["md"].map((expand) => (
+        <Navbar key={expand}  expand={expand} className="mb-3 shadow sticky tgi">
+          <Container fluid>
+            <Navbar.Brand href="#"> <h1 className="name-title">TimBa</h1></Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                  <Nav.Link href="#action1">  <li className="nav-item">
                 <a className="nav-link" href={UseReducerPath}>
                   UseReducer
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+              </li></Nav.Link>
+                  <Nav.Link href="#action2">  <li className="nav-item">
+                <a className="nav-link" href={CustomHooksPath}>
+                  CustomHook
+                </a>
+              </li></Nav.Link>
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+      ))}
+    </div>
   );
 }
 
-export default Navbar;
+export default OffcanvasExample;

@@ -20,11 +20,26 @@ code {
   font-weight: bolder;  
   font-size: 30px;
   color:darkorange;
-  margin-right: 28rem;
 }
-/* @media screen(max-width:860px;) {
-  
+/* @media screen and (max-width:860px) {
+  .name-title{
+    
+  }
 } */
+.tgi {
+  position: fixed !important;
+ width: 100% !important; 
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color:darkorange;
+  background-color: rgb(48, 40, 72);;
+  box-shadow: 3rem solid black;
+
+}
+.nav-item {
+  max-height: 100px;
+}
 .muti{
   display: flex;
   justify-content: space-between !important;
@@ -39,13 +54,14 @@ code {
   overflow: hidden;
   top:0;
   z-index: 1;
-  background-color: rgb(48, 40, 72);;
+  background-color: rgb(48, 40, 72);
   box-shadow: 3rem solid black;
 }
 .nav-link{
   font-weight: 500;
   cursor: pointer;
   letter-spacing: 0.6px;
+  color: darkorange !important;
 }
 .nav-link:hover{
   transform: scale(1.03);
