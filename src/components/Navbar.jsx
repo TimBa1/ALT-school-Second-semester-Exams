@@ -1,9 +1,4 @@
-import {
-  CustomHooksPath,
-  ErrorBoundaryPath,
-  NotFoundPath,
-  UseReducerPath,
-} from "../paths";
+
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -35,7 +30,7 @@ function OffcanvasExample() {
                   <Nav.Link href="#action1">
                     {" "}
                     <li className="nav-item">
-                      <a className="nav-link" href={UseReducerPath}>
+                      <a className="nav-link" href="/usereducer">
                         UseReducer
                       </a>
                     </li>
@@ -43,7 +38,7 @@ function OffcanvasExample() {
                   <Nav.Link href="#action2">
                     {" "}
                     <li className="nav-item">
-                      <a className="nav-link" href={CustomHooksPath}>
+                      <a className="nav-link" href="/">
                         CustomHook
                       </a>
                     </li>
@@ -51,7 +46,7 @@ function OffcanvasExample() {
                   <Nav.Link href="#action2">
                     {" "}
                     <li className="nav-item">
-                      <a className="nav-link" href={ErrorBoundaryPath}>
+                      <a className="nav-link" href='/error'>
                         Error Boundary
                       </a>
                     </li>
@@ -59,7 +54,7 @@ function OffcanvasExample() {
                   <Nav.Link href="#action2">
                     {" "}
                     <li className="nav-item">
-                      <a className="nav-link" href={NotFoundPath}>
+                      <a className="nav-link" href="/found">
                         404
                       </a>
                     </li>
