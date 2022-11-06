@@ -1,4 +1,4 @@
-export const UseReducerPath = "/usereduer";
-export const CustomHooksPath = "/";
-export const NotFoundPath = "*";
-export const ErrorBoundaryPath = "/error";
+export const UseReducerPath = '/'
+export const CustomHooksPath = '/hooks'
+export const NotFoundPath = '*'
+export const ErrorBoundaryPath ="/error"

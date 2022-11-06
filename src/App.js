@@ -5,6 +5,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import CustomHook from "./Pages/CustomHooks";
 import NotFound from "./Pages/NotFound";
 import UseReducer from "./Pages/UseReducer";
+import { CustomHooksPath, ErrorBoundaryPath, NotFoundPath, UseReducerPath } from "./paths";
 
 function App() {
   return (
@@ -14,10 +15,10 @@ function App() {
           <Navbar />
           <ErrorBoundary>
             <Routes>
-              <Route path='/' element={<CustomHook />} />
-              <Route path='/usereducer' element={<UseReducer />} />
-              <Route path='/found' element={<NotFound />} />
-              <Route path='/error' element={<ErrorBoundary />} />
+              <Route path={CustomHooksPath} element={<CustomHook />} />
+              <Route path={UseReducerPath} element={<UseReducer />} />
+              <Route path={NotFoundPath} element={<NotFound />} />
+              <Route path={ErrorBoundaryPath} element={<ErrorBoundary />} />
             </Routes>
           </ErrorBoundary>
         </div>

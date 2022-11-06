@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { Link } from "react-router-dom";
+import { CustomHooksPath, ErrorBoundaryPath, NotFoundPath, UseReducerPath } from "../paths";
 
 function OffcanvasExample() {
   return (
@@ -29,35 +31,39 @@ function OffcanvasExample() {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#action1">
                     {" "}
+                  <Link to={UseReducerPath}>
                     <li className="nav-item">
                       <a className="nav-link" href="/usereducer">
                         UseReducer
                       </a>
-                    </li>
+                    </li></Link>
                   </Nav.Link>
                   <Nav.Link href="#action2">
                     {" "}
+                    <Link to={CustomHooksPath}>
                     <li className="nav-item">
                       <a className="nav-link" href="/">
                         CustomHook
                       </a>
-                    </li>
+                    </li></Link>
                   </Nav.Link>
                   <Nav.Link href="#action2">
                     {" "}
+                    <Link to={ErrorBoundaryPath}>
                     <li className="nav-item">
                       <a className="nav-link" href='/error'>
                         Error Boundary
                       </a>
-                    </li>
+                    </li></Link>
                   </Nav.Link>
                   <Nav.Link href="#action2">
                     {" "}
+                    <Link to={NotFoundPath}>
                     <li className="nav-item">
                       <a className="nav-link" href="/found">
                         404
                       </a>
-                    </li>
+                    </li></Link>
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
