@@ -12,6 +12,10 @@ const CustomHook = () => {
   const Reset = () => {
     setCount(0);
   };
+  const setValue=(value)=>{
+    setCount(parseInt(value))
+  }
+  console.log(setCount)
   // const Value = (e)=>{
   //     setCount(count +1 )
   // }
@@ -34,7 +38,7 @@ const CustomHook = () => {
       <input
         type="number"
         value={count}
-        onChange={(e) => setCount(e.target.value)}
+        onChange={(e) => setValue(e.target.value)}
         placeholder="number"
         style={{width:"150px",marginTop:"1rem", textAlign:"center", height:"50px", outline:"transparent",backgroundColor:"rgb(48, 40, 72)",color:"white", border:"3px solid darkorange", borderRadius:"10px"}}
       />

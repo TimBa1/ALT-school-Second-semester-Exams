@@ -1,3 +1,4 @@
-export const UseReducerPath = '/'
-export const CustomHooksPath = '/use-hooks'
-export const NotFoundPath = '*'
+export const UseReducerPath = "/";
+export const CustomHooksPath = "/hooks";
+export const NotFoundPath = "*";
+export const ErrorBoundaryPath = "/error";

@@ -28,11 +28,15 @@ const UseReducer = () => {
     const Reset = () => {
       dispatch({ type: "reset" });
     };
+    const setValue = (value) => {
+      dispatch(parseInt(value));
+    };
   return (
     <div>
-      <div style={{color:"darkorange",fontFamily:"fantasy", fontSize:"45px" ,marginTop:"2rem", marginBottom:"5rem"}}>
+      <div style={{color:"darkorange",fontFamily:"fantasy", fontSize:"45px" ,marginTop:"2rem", marginBottom:"3rem"}}>
             Counter App with UseReducer
         </div>
+        <h4 style={{width:"80%" ,margin:"auto", marginBottom:"2rem"}}>To test for error boundary, try inputing a number in the input field</h4>
         <h1>Count:{state.count}</h1>
         <div>
           <Button handleChange={Decrement} text="Decrement" color="red" />
@@ -43,8 +47,13 @@ const UseReducer = () => {
  <input
         type="number"
         value={state.count}
-        onChange={(e) => dispatch(e.target.value)}
+        onChange={(e) => setValue(e.target.value)}
         placeholder="number"
+        onKeyUp={(event) => {
+          if (event.key === 'Enter') {
+            setValue(event.target.value);
+          }
+        }}
         style={{width:"150px",marginTop:"1rem", height:"50px", textAlign:"center", outline:"transparent",backgroundColor:"rgb(48, 40, 72)",color:"white", border:"3px solid darkorange", borderRadius:"10px"}}
       />
     </div>

@@ -1,20 +1,24 @@
-import { CustomHooksPath, UseReducerPath } from "../paths";
-
-
-import Container from 'react-bootstrap/Container';
-
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import {
+  CustomHooksPath,
+  ErrorBoundaryPath,
+  NotFoundPath,
+  UseReducerPath,
+} from "../paths";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Offcanvas from "react-bootstrap/Offcanvas";
 
 function OffcanvasExample() {
   return (
     <div className="nav-item">
       {["md"].map((expand) => (
-        <Navbar key={expand}  expand={expand} className="mb-3 shadow sticky tgi">
+        <Navbar key={expand} expand={expand} className="mb-3 shadow sticky tgi">
           <Container fluid>
-            <Navbar.Brand href="#"> <h1 className="name-title">TimBa</h1></Navbar.Brand>
+            <Navbar.Brand href="#">
+              {" "}
+              <h1 className="name-title">TimBa</h1>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -22,21 +26,44 @@ function OffcanvasExample() {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                </Offcanvas.Title>
+                <Offcanvas.Title
+                  id={`offcanvasNavbarLabel-expand-${expand}`}
+                ></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">  <li className="nav-item">
-                <a className="nav-link" href={UseReducerPath}>
-                  UseReducer
-                </a>
-              </li></Nav.Link>
-                  <Nav.Link href="#action2">  <li className="nav-item">
-                <a className="nav-link" href={CustomHooksPath}>
-                  CustomHook
-                </a>
-              </li></Nav.Link>
+                  <Nav.Link href="#action1">
+                    {" "}
+                    <li className="nav-item">
+                      <a className="nav-link" href={UseReducerPath}>
+                        UseReducer
+                      </a>
+                    </li>
+                  </Nav.Link>
+                  <Nav.Link href="#action2">
+                    {" "}
+                    <li className="nav-item">
+                      <a className="nav-link" href={CustomHooksPath}>
+                        CustomHook
+                      </a>
+                    </li>
+                  </Nav.Link>
+                  <Nav.Link href="#action2">
+                    {" "}
+                    <li className="nav-item">
+                      <a className="nav-link" href={ErrorBoundaryPath}>
+                        Error Boundary
+                      </a>
+                    </li>
+                  </Nav.Link>
+                  <Nav.Link href="#action2">
+                    {" "}
+                    <li className="nav-item">
+                      <a className="nav-link" href={NotFoundPath}>
+                        404
+                      </a>
+                    </li>
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
